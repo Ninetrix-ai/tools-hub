@@ -133,6 +133,8 @@ def main() -> None:
             entry["credential_aliases"] = data["credential_aliases"]
         if data.get("oauth"):
             entry["oauth"] = data["oauth"]
+        if data.get("recommended_skills"):
+            entry["recommended_skills"] = data["recommended_skills"]
 
         registry["tools"][name] = entry
 

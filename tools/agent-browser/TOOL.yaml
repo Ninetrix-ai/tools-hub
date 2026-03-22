@@ -9,6 +9,9 @@ tags:
 - scraping
 verified: true
 
+recommended_skills:
+  - hub://agent-browser@1.0.0
+
 source:
   type: local
   files:
