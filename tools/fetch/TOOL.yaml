@@ -1,0 +1,11 @@
+name: fetch
+version: 1.0.0
+description: HTTP fetch — retrieve any URL as text or HTML
+author: ninetrix
+tags:
+- http
+verified: true
+source:
+  type: mcp
+  runner: uvx
+  package: mcp-server-fetch

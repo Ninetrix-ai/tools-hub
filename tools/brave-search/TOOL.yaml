@@ -1,0 +1,15 @@
+name: brave-search
+version: 1.0.0
+description: Brave Search — web search with privacy focus
+author: ninetrix
+tags:
+- search
+verified: true
+source:
+  type: mcp
+  runner: npx
+  package: '@modelcontextprotocol/server-brave-search'
+credentials:
+  BRAVE_API_KEY:
+    label: Brave Search API key
+    required: true

@@ -1,0 +1,17 @@
+name: postgres
+version: 1.0.0
+description: PostgreSQL — read/write SQL queries
+author: ninetrix
+tags:
+- database
+verified: true
+source:
+  type: mcp
+  runner: npx
+  package: '@modelcontextprotocol/server-postgres'
+credentials:
+  POSTGRES_CONNECTION_STRING:
+    label: PostgreSQL connection string (postgresql://...)
+    required: true
+credential_aliases:
+  DATABASE_URL: POSTGRES_CONNECTION_STRING

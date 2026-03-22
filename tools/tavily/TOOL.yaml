@@ -1,0 +1,15 @@
+name: tavily
+version: 1.0.0
+description: Tavily Search — AI-optimised web search, free tier available
+author: ninetrix
+tags:
+- search
+verified: true
+source:
+  type: mcp
+  runner: npx
+  package: tavily-mcp
+credentials:
+  TAVILY_API_KEY:
+    label: Tavily API key
+    required: true

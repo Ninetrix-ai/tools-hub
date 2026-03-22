@@ -1,0 +1,13 @@
+name: httpbin
+version: 1.0.0
+description: "httpbin — HTTP request/response testing service"
+author: community
+tags:
+- http
+- testing
+- example
+verified: false
+source:
+  type: openapi
+  spec_url: "https://raw.githubusercontent.com/postmanlabs/httpbin/master/httpbin/spec.json"
+  base_url: "https://httpbin.org"

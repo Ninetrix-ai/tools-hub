@@ -1,0 +1,11 @@
+name: duckduckgo
+version: 1.0.0
+description: "DuckDuckGo — privacy-focused web search"
+author: ninetrix
+tags:
+- search
+verified: true
+source:
+  type: mcp
+  runner: npx
+  package: "@nicepkg/duckduckgo-mcp-server"

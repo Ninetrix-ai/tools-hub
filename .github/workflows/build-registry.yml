@@ -1,0 +1,33 @@
+name: Build Registry
+
+on:
+  push:
+    branches: [main]
+    paths: ['tools/*/TOOL.yaml']
+  pull_request:
+    paths: ['tools/*/TOOL.yaml']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Generate registry.json
+        run: python generate_registry.py
+
+      - name: Commit registry.json (push only)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add registry.json
+          git diff --cached --quiet || git commit -m "chore: regenerate registry.json"
+          git push

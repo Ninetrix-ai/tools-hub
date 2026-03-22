@@ -1,0 +1,16 @@
+name: google-drive
+version: 1.0.0
+description: Google Drive — list, read, search files and folders
+author: ninetrix
+tags:
+- search
+- google
+verified: true
+source:
+  type: mcp
+  runner: npx
+  package: '@modelcontextprotocol/server-gdrive'
+credentials:
+  GOOGLE_DRIVE_ACCESS_TOKEN:
+    label: Google OAuth access token for Drive
+    required: true

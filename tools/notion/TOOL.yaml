@@ -1,0 +1,15 @@
+name: notion
+version: 1.0.0
+description: Notion — read/write pages, databases, blocks
+author: ninetrix
+tags:
+- productivity
+verified: true
+source:
+  type: mcp
+  runner: npx
+  package: '@notionhq/notion-mcp-server'
+credentials:
+  NOTION_API_KEY:
+    label: Notion integration token (secret_...)
+    required: true

@@ -1,0 +1,19 @@
+name: github
+version: 1.0.0
+description: GitHub — repos, issues, PRs, code search, file contents
+author: ninetrix
+tags:
+- search
+- developer
+- git
+verified: true
+source:
+  type: mcp
+  runner: npx
+  package: '@modelcontextprotocol/server-github'
+credentials:
+  GITHUB_PERSONAL_ACCESS_TOKEN:
+    label: GitHub personal access token (classic or fine-grained)
+    required: true
+credential_aliases:
+  GITHUB_TOKEN: GITHUB_PERSONAL_ACCESS_TOKEN

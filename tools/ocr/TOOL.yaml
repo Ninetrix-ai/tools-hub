@@ -1,0 +1,24 @@
+name: ocr
+version: 1.0.0
+description: "OCR — extract text from images and PDFs using Tesseract"
+author: ninetrix
+tags:
+- ocr
+- images
+- pdf
+- document
+verified: true
+
+source:
+  type: local
+  files:
+    - ocr_tools.py
+
+dependencies:
+  pip:
+    - pytesseract>=0.3
+    - Pillow>=10.0
+    - pymupdf>=1.24
+  apt:
+    - tesseract-ocr
+    - tesseract-ocr-eng

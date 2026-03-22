@@ -1,0 +1,16 @@
+name: linear
+version: 1.0.0
+description: Linear — issues, projects, teams, cycles
+author: ninetrix
+tags:
+- project-management
+- developer
+verified: true
+source:
+  type: mcp
+  runner: npx
+  package: '@linear/linear-mcp-server'
+credentials:
+  LINEAR_API_KEY:
+    label: Linear personal API key
+    required: true

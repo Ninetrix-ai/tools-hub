@@ -1,0 +1,16 @@
+name: stripe
+version: 1.0.0
+description: Stripe — payments, customers, invoices, subscriptions
+author: ninetrix
+tags:
+- payments
+- fintech
+verified: true
+source:
+  type: mcp
+  runner: npx
+  package: '@stripe/agent-toolkit'
+credentials:
+  STRIPE_SECRET_KEY:
+    label: Stripe secret key (sk_live_... or sk_test_...)
+    required: true

@@ -1,0 +1,13 @@
+name: filesystem
+version: 1.0.0
+description: Local filesystem — read and write files in /workspace
+author: ninetrix
+tags:
+- filesystem
+verified: true
+source:
+  type: mcp
+  runner: npx
+  package: '@modelcontextprotocol/server-filesystem'
+  args:
+  - /workspace

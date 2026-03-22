@@ -1,0 +1,11 @@
+name: puppeteer
+version: 1.0.0
+description: Browser automation with Puppeteer (headless Chrome)
+author: ninetrix
+tags:
+- browser
+verified: true
+source:
+  type: mcp
+  runner: npx
+  package: '@modelcontextprotocol/server-puppeteer'

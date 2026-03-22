@@ -1,0 +1,12 @@
+name: petstore
+version: 1.0.0
+description: "Swagger Petstore — example REST API for testing OpenAPI integrations"
+author: community
+tags:
+- example
+- rest
+verified: false
+source:
+  type: openapi
+  spec_url: "https://petstore3.swagger.io/api/v3/openapi.json"
+  base_url: "https://petstore3.swagger.io/api/v3"

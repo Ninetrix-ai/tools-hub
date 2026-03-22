@@ -1,0 +1,16 @@
+name: sendgrid
+version: 1.0.0
+description: "SendGrid — transactional email delivery"
+author: ninetrix
+tags:
+- email
+- communication
+verified: true
+source:
+  type: openapi
+  spec_url: "https://raw.githubusercontent.com/sendgrid/sendgrid-oai/main/oai.yaml"
+  base_url: "https://api.sendgrid.com"
+credentials:
+  SENDGRID_API_KEY:
+    label: "SendGrid API key"
+    required: true

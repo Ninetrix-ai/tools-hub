@@ -1,0 +1,14 @@
+name: sqlite
+version: 1.0.0
+description: SQLite — read/write SQL queries on a local .db file
+author: ninetrix
+tags:
+- database
+verified: true
+source:
+  type: mcp
+  runner: uvx
+  package: mcp-server-sqlite
+  args:
+  - --db-path
+  - /data/db.sqlite

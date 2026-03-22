@@ -1,0 +1,16 @@
+name: openai
+version: 1.0.0
+description: "OpenAI — completions, embeddings, images, audio"
+author: ninetrix
+tags:
+- ai
+- llm
+verified: true
+source:
+  type: openapi
+  spec_url: "https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml"
+  base_url: "https://api.openai.com"
+credentials:
+  OPENAI_API_KEY:
+    label: "OpenAI API key"
+    required: true

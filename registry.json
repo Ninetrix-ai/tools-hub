@@ -1,0 +1,477 @@
+{
+  "version": 2,
+  "generated_at": "2026-03-22T21:45:28Z",
+  "tools": {
+    "brave-search": {
+      "latest": "1.0.0",
+      "description": "Brave Search \u2014 web search with privacy focus",
+      "tags": [
+        "search"
+      ],
+      "verified": true,
+      "source": {
+        "type": "mcp",
+        "runner": "npx",
+        "package": "@modelcontextprotocol/server-brave-search"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "7513ffb934da2e7c7cb91e659ab419641419ffb94627db3d94441fc2955d303a"
+        }
+      },
+      "credentials": {
+        "BRAVE_API_KEY": {
+          "label": "Brave Search API key",
+          "required": true
+        }
+      }
+    },
+    "duckduckgo": {
+      "latest": "1.0.0",
+      "description": "DuckDuckGo \u2014 privacy-focused web search",
+      "tags": [
+        "search"
+      ],
+      "verified": true,
+      "source": {
+        "type": "mcp",
+        "runner": "npx",
+        "package": "@nicepkg/duckduckgo-mcp-server"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "1aab9290ce5991f2babd61f4bcca2faca1db029a64d7f9a6411513c5cd871ced"
+        }
+      }
+    },
+    "fetch": {
+      "latest": "1.0.0",
+      "description": "HTTP fetch \u2014 retrieve any URL as text or HTML",
+      "tags": [
+        "http"
+      ],
+      "verified": true,
+      "source": {
+        "type": "mcp",
+        "runner": "uvx",
+        "package": "mcp-server-fetch"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "71d110ad1804209b4f99b53d50d7796478ea4f1a6541a1548fae4c035d8b1759"
+        }
+      }
+    },
+    "filesystem": {
+      "latest": "1.0.0",
+      "description": "Local filesystem \u2014 read and write files in /workspace",
+      "tags": [
+        "filesystem"
+      ],
+      "verified": true,
+      "source": {
+        "type": "mcp",
+        "runner": "npx",
+        "package": "@modelcontextprotocol/server-filesystem",
+        "args": [
+          "/workspace"
+        ]
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "e3867ab64afde4e883fc7e9bb930eef797f9d2762ad5301e15d4c986b3e09811"
+        }
+      }
+    },
+    "github": {
+      "latest": "1.0.0",
+      "description": "GitHub \u2014 repos, issues, PRs, code search, file contents",
+      "tags": [
+        "search",
+        "developer",
+        "git"
+      ],
+      "verified": true,
+      "source": {
+        "type": "mcp",
+        "runner": "npx",
+        "package": "@modelcontextprotocol/server-github"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "a603b10a31788e1a230ae0fb51a10827206b75d7aad93bc9adf2c6de6a1f6bfa"
+        }
+      },
+      "credentials": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": {
+          "label": "GitHub personal access token (classic or fine-grained)",
+          "required": true
+        }
+      },
+      "credential_aliases": {
+        "GITHUB_TOKEN": "GITHUB_PERSONAL_ACCESS_TOKEN"
+      }
+    },
+    "google-drive": {
+      "latest": "1.0.0",
+      "description": "Google Drive \u2014 list, read, search files and folders",
+      "tags": [
+        "search",
+        "google"
+      ],
+      "verified": true,
+      "source": {
+        "type": "mcp",
+        "runner": "npx",
+        "package": "@modelcontextprotocol/server-gdrive"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "961b8327662634502aeeba46493af2d405182abac496400450e1344cf1bc15ae"
+        }
+      },
+      "credentials": {
+        "GOOGLE_DRIVE_ACCESS_TOKEN": {
+          "label": "Google OAuth access token for Drive",
+          "required": true
+        }
+      }
+    },
+    "httpbin": {
+      "latest": "1.0.0",
+      "description": "httpbin \u2014 HTTP request/response testing service",
+      "tags": [
+        "http",
+        "testing",
+        "example"
+      ],
+      "verified": false,
+      "source": {
+        "type": "openapi",
+        "spec_url": "https://raw.githubusercontent.com/postmanlabs/httpbin/master/httpbin/spec.json",
+        "base_url": "https://httpbin.org"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "f7cda2202363af85cf62524a187483e3e94e4d7030894889998ce8a7811e1b11"
+        }
+      }
+    },
+    "linear": {
+      "latest": "1.0.0",
+      "description": "Linear \u2014 issues, projects, teams, cycles",
+      "tags": [
+        "project-management",
+        "developer"
+      ],
+      "verified": true,
+      "source": {
+        "type": "mcp",
+        "runner": "npx",
+        "package": "@linear/linear-mcp-server"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "3f5e2b9379b33c521cb0b21086cea1a788d0db3efb072d45c9306d83dbd5b8ed"
+        }
+      },
+      "credentials": {
+        "LINEAR_API_KEY": {
+          "label": "Linear personal API key",
+          "required": true
+        }
+      }
+    },
+    "memory": {
+      "latest": "1.0.0",
+      "description": "In-process key-value memory store \u2014 persists across turns",
+      "tags": [
+        "storage"
+      ],
+      "verified": true,
+      "source": {
+        "type": "mcp",
+        "runner": "npx",
+        "package": "@modelcontextprotocol/server-memory"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "f7de55a433c9507b5b5995e52d1fc9104cfb90b416362e4c22f1b1f17286d8d5"
+        }
+      }
+    },
+    "notion": {
+      "latest": "1.0.0",
+      "description": "Notion \u2014 read/write pages, databases, blocks",
+      "tags": [
+        "productivity"
+      ],
+      "verified": true,
+      "source": {
+        "type": "mcp",
+        "runner": "npx",
+        "package": "@notionhq/notion-mcp-server"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "49d8b02ac772edfd07f0b0fa548233498fa8f33c72101df7bc5f67db09685d68"
+        }
+      },
+      "credentials": {
+        "NOTION_API_KEY": {
+          "label": "Notion integration token (secret_...)",
+          "required": true
+        }
+      }
+    },
+    "ocr": {
+      "latest": "1.0.0",
+      "description": "OCR \u2014 extract text from images and PDFs using Tesseract",
+      "tags": [
+        "ocr",
+        "images",
+        "pdf",
+        "document"
+      ],
+      "verified": true,
+      "source": {
+        "type": "local",
+        "files": [
+          "ocr_tools.py"
+        ]
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "3a9eb6e089eaef525cd316f1253d57029e4fbed5193f672dee7d76397452e10e",
+          "file_hashes": {
+            "ocr_tools.py": "cfd083e6b74a03d8c085ff9a35d234f6a11dc6327df5171f849c2481f2b84c61"
+          }
+        }
+      },
+      "dependencies": {
+        "pip": [
+          "pytesseract>=0.3",
+          "Pillow>=10.0",
+          "pymupdf>=1.24"
+        ],
+        "apt": [
+          "tesseract-ocr",
+          "tesseract-ocr-eng"
+        ]
+      }
+    },
+    "openai": {
+      "latest": "1.0.0",
+      "description": "OpenAI \u2014 completions, embeddings, images, audio",
+      "tags": [
+        "ai",
+        "llm"
+      ],
+      "verified": true,
+      "source": {
+        "type": "openapi",
+        "spec_url": "https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml",
+        "base_url": "https://api.openai.com"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "25baaab051156ef6096604442a0973172adab03238ddf79a76b539c92ed47d6c"
+        }
+      },
+      "credentials": {
+        "OPENAI_API_KEY": {
+          "label": "OpenAI API key",
+          "required": true
+        }
+      }
+    },
+    "petstore": {
+      "latest": "1.0.0",
+      "description": "Swagger Petstore \u2014 example REST API for testing OpenAPI integrations",
+      "tags": [
+        "example",
+        "rest"
+      ],
+      "verified": false,
+      "source": {
+        "type": "openapi",
+        "spec_url": "https://petstore3.swagger.io/api/v3/openapi.json",
+        "base_url": "https://petstore3.swagger.io/api/v3"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "b89970a5c31e9313a011dad12a189d08c55243006de187b2acc65c50b1c7b33b"
+        }
+      }
+    },
+    "postgres": {
+      "latest": "1.0.0",
+      "description": "PostgreSQL \u2014 read/write SQL queries",
+      "tags": [
+        "database"
+      ],
+      "verified": true,
+      "source": {
+        "type": "mcp",
+        "runner": "npx",
+        "package": "@modelcontextprotocol/server-postgres"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "ed4418e711a1d7a5a60c4f4daf3f225e5e4a5dedbe9aa2cbbd8f074022f88e61"
+        }
+      },
+      "credentials": {
+        "POSTGRES_CONNECTION_STRING": {
+          "label": "PostgreSQL connection string (postgresql://...)",
+          "required": true
+        }
+      },
+      "credential_aliases": {
+        "DATABASE_URL": "POSTGRES_CONNECTION_STRING"
+      }
+    },
+    "puppeteer": {
+      "latest": "1.0.0",
+      "description": "Browser automation with Puppeteer (headless Chrome)",
+      "tags": [
+        "browser"
+      ],
+      "verified": true,
+      "source": {
+        "type": "mcp",
+        "runner": "npx",
+        "package": "@modelcontextprotocol/server-puppeteer"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "0648a901d91227b045eb52d89f0369c5549d9dc0871a0278ad58934c6917be2a"
+        }
+      }
+    },
+    "sendgrid": {
+      "latest": "1.0.0",
+      "description": "SendGrid \u2014 transactional email delivery",
+      "tags": [
+        "email",
+        "communication"
+      ],
+      "verified": true,
+      "source": {
+        "type": "openapi",
+        "spec_url": "https://raw.githubusercontent.com/sendgrid/sendgrid-oai/main/oai.yaml",
+        "base_url": "https://api.sendgrid.com"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "6bc697416bd29d3dcdd1951f4d7a9d78cc89dcaebb596f0086d1a205abaf15f5"
+        }
+      },
+      "credentials": {
+        "SENDGRID_API_KEY": {
+          "label": "SendGrid API key",
+          "required": true
+        }
+      }
+    },
+    "slack": {
+      "latest": "1.0.0",
+      "description": "Slack \u2014 send messages, list channels, read threads",
+      "tags": [
+        "communication"
+      ],
+      "verified": true,
+      "source": {
+        "type": "mcp",
+        "runner": "npx",
+        "package": "@modelcontextprotocol/server-slack"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "070cebde60c519443a6a398d0305f00aa2fe13a9f9be911264078c1047a6d7be"
+        }
+      },
+      "credentials": {
+        "SLACK_BOT_TOKEN": {
+          "label": "Slack bot token (xoxb-...)",
+          "required": true
+        },
+        "SLACK_TEAM_ID": {
+          "label": "Slack workspace/team ID",
+          "required": true
+        }
+      }
+    },
+    "sqlite": {
+      "latest": "1.0.0",
+      "description": "SQLite \u2014 read/write SQL queries on a local .db file",
+      "tags": [
+        "database"
+      ],
+      "verified": true,
+      "source": {
+        "type": "mcp",
+        "runner": "uvx",
+        "package": "mcp-server-sqlite",
+        "args": [
+          "--db-path",
+          "/data/db.sqlite"
+        ]
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "8df7490f572f839eedd5fb06b931e0cbfb8c509023d99da0e03682121fcd3c6f"
+        }
+      }
+    },
+    "stripe": {
+      "latest": "1.0.0",
+      "description": "Stripe \u2014 payments, customers, invoices, subscriptions",
+      "tags": [
+        "payments",
+        "fintech"
+      ],
+      "verified": true,
+      "source": {
+        "type": "mcp",
+        "runner": "npx",
+        "package": "@stripe/agent-toolkit"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "e10437de0de8a2cf9615efc0925ba4102a94da2f554544b1972ae9664f33a048"
+        }
+      },
+      "credentials": {
+        "STRIPE_SECRET_KEY": {
+          "label": "Stripe secret key (sk_live_... or sk_test_...)",
+          "required": true
+        }
+      }
+    },
+    "tavily": {
+      "latest": "1.0.0",
+      "description": "Tavily Search \u2014 AI-optimised web search, free tier available",
+      "tags": [
+        "search"
+      ],
+      "verified": true,
+      "source": {
+        "type": "mcp",
+        "runner": "npx",
+        "package": "tavily-mcp"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "2ead37790b0484f0a30d2c907c9bf79c3cbab7d8d7840124b3ca65fa8f25dea5"
+        }
+      },
+      "credentials": {
+        "TAVILY_API_KEY": {
+          "label": "Tavily API key",
+          "required": true
+        }
+      }
+    }
+  }
+}
