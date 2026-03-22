@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": "2026-03-22T22:21:47Z",
+  "generated_at": "2026-03-22T22:24:21Z",
   "tools": {
     "agent-browser": {
       "latest": "1.0.0",
@@ -20,7 +20,7 @@
       },
       "versions": {
         "1.0.0": {
-          "sha256": "c20d4b3962f1afd0c15a2b94f922530ea0b027a0bfe542ff428a4000d28623d7",
+          "sha256": "91150d20565f51289a854ed97ff4eadd990985f810270bab1b32dc27e0e36429",
           "file_hashes": {
             "agent_browser_tools.py": "91d8800fb6a9c987e4178bf244e0f2e10a3a0d46c5843eaf1e0788381612909c"
           }
@@ -33,7 +33,7 @@
           "agent-browser"
         ]
       },
-      "recommended_skills": [
+      "skill_set": [
         "hub://agent-browser@1.0.0"
       ]
     },
