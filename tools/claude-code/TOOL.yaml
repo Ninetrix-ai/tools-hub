@@ -1,0 +1,22 @@
+name: claude-code
+version: 1.0.0
+description: "Claude Code CLI — agentic coding assistant that reads codebases, edits files, runs commands, and handles git workflows via natural language"
+author: ninetrix
+tags:
+- developer
+- coding
+- ai
+- automation
+verified: true
+
+skill_set:
+  - hub://claude-code-master@1.0.0
+
+source:
+  type: cli
+  install: "curl -fsSL https://claude.ai/install.sh | bash"
+
+credentials:
+  ANTHROPIC_API_KEY:
+    label: Anthropic API key (required for headless/print mode)
+    required: true

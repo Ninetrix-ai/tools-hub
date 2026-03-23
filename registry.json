@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": "2026-03-23T07:01:53Z",
+  "generated_at": "2026-03-23T07:21:16Z",
   "tools": {
     "agent-browser": {
       "latest": "1.0.0",
@@ -60,6 +60,35 @@
           "required": true
         }
       }
+    },
+    "claude-code": {
+      "latest": "1.0.0",
+      "description": "Claude Code CLI \u2014 agentic coding assistant that reads codebases, edits files, runs commands, and handles git workflows via natural language",
+      "tags": [
+        "developer",
+        "coding",
+        "ai",
+        "automation"
+      ],
+      "verified": true,
+      "source": {
+        "type": "cli",
+        "install": "curl -fsSL https://claude.ai/install.sh | bash"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "a9a618a13fedf612d3588540648bbe9b31ef5a149bf1fb4679b2860b352762e1"
+        }
+      },
+      "credentials": {
+        "ANTHROPIC_API_KEY": {
+          "label": "Anthropic API key (required for headless/print mode)",
+          "required": true
+        }
+      },
+      "skill_set": [
+        "hub://claude-code-master@1.0.0"
+      ]
     },
     "cloudflare": {
       "latest": "1.0.0",
