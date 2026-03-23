@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": "2026-03-22T22:24:32Z",
+  "generated_at": "2026-03-23T03:56:12Z",
   "tools": {
     "agent-browser": {
       "latest": "1.0.0",
@@ -61,6 +61,33 @@
         }
       }
     },
+    "cloudflare": {
+      "latest": "1.0.0",
+      "description": "Cloudflare API \u2014 2,500+ endpoints via MCP: DNS, Workers, R2, Zero Trust, and more",
+      "tags": [
+        "cloudflare",
+        "dns",
+        "cdn",
+        "infrastructure"
+      ],
+      "verified": true,
+      "source": {
+        "type": "mcp",
+        "runner": "npx",
+        "package": "mcp-remote",
+        "args": [
+          "https://mcp.cloudflare.com/mcp"
+        ]
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "ba0826f32ed8e0820666078a068b13e1497e5f48d1044f163b185f60989168c7"
+        }
+      },
+      "skill_set": [
+        "hub://cloudflare-master@1.0.0"
+      ]
+    },
     "duckduckgo": {
       "latest": "1.0.0",
       "description": "DuckDuckGo \u2014 privacy-focused web search",
@@ -118,6 +145,35 @@
         }
       }
     },
+    "gh": {
+      "latest": "1.0.0",
+      "description": "GitHub CLI \u2014 repos, issues, PRs, releases, Actions, gists, and raw API access",
+      "tags": [
+        "developer",
+        "git",
+        "github",
+        "ci-cd"
+      ],
+      "verified": true,
+      "source": {
+        "type": "cli",
+        "install": "mkdir -p -m 755 /etc/apt/keyrings\n&& wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg | tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null\n&& chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg\n&& echo \"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main\" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null\n&& apt-get update\n&& apt-get install -y gh\n"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "9b60a64fe8361e73b3e291e8f3ad23b212e4ddb747db030be520d4fb8df20982"
+        }
+      },
+      "credentials": {
+        "GITHUB_TOKEN": {
+          "label": "GitHub personal access token (used by gh for auth)",
+          "required": true
+        }
+      },
+      "skill_set": [
+        "hub://gh-master@1.0.0"
+      ]
+    },
     "github": {
       "latest": "1.0.0",
       "description": "GitHub \u2014 repos, issues, PRs, code search, file contents",
@@ -146,6 +202,72 @@
       "credential_aliases": {
         "GITHUB_TOKEN": "GITHUB_PERSONAL_ACCESS_TOKEN"
       }
+    },
+    "godaddy": {
+      "latest": "1.0.0",
+      "description": "GoDaddy \u2014 domains, DNS, SSL certificates, and account management via REST API",
+      "tags": [
+        "domains",
+        "dns",
+        "hosting"
+      ],
+      "verified": true,
+      "source": {
+        "type": "openapi",
+        "spec_url": "https://raw.githubusercontent.com/konfig-sdks/openapi-examples/HEAD/godaddy/domains/openapi.yaml",
+        "base_url": "https://api.godaddy.com"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "1a4e11b6f5c55f0e878293e1641fb160a8313365b85fa80cf4fffa4fd1fec667"
+        }
+      },
+      "credentials": {
+        "GODADDY_API_KEY": {
+          "label": "GoDaddy API key (from developer.godaddy.com)",
+          "required": true
+        },
+        "GODADDY_API_SECRET": {
+          "label": "GoDaddy API secret",
+          "required": true
+        }
+      },
+      "skill_set": [
+        "hub://godaddy-guide@1.0.0"
+      ]
+    },
+    "gogcli": {
+      "latest": "1.0.0",
+      "description": "gogcli \u2014 Google Workspace CLI: Gmail, Calendar, Drive, Sheets, Docs, Contacts, Tasks, and more",
+      "tags": [
+        "google",
+        "workspace",
+        "email",
+        "productivity"
+      ],
+      "verified": true,
+      "source": {
+        "type": "cli",
+        "install": "curl -sSL https://github.com/steipete/gogcli/releases/latest/download/gog_linux_amd64.tar.gz | tar xz -C /usr/local/bin gog\n"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "a95040d8cbe0773948965b8bbf202f8db5f87b8ff404c42c6c145455907655c7"
+        }
+      },
+      "credentials": {
+        "GOG_OAUTH_CLIENT_JSON": {
+          "label": "Google Cloud OAuth client JSON (Desktop app credentials)",
+          "required": true
+        },
+        "GOG_REFRESH_TOKEN": {
+          "label": "Google OAuth refresh token for headless auth",
+          "required": false
+        }
+      },
+      "skill_set": [
+        "hub://google-workspace-master@1.0.0"
+      ]
     },
     "google-drive": {
       "latest": "1.0.0",
@@ -423,7 +545,7 @@
       },
       "versions": {
         "1.0.0": {
-          "sha256": "070cebde60c519443a6a398d0305f00aa2fe13a9f9be911264078c1047a6d7be"
+          "sha256": "b875b158818bef199ad1d5d8edc8ef35330cb93ddb05b27f07cd4dd119745d3b"
         }
       },
       "credentials": {
@@ -435,7 +557,10 @@
           "label": "Slack workspace/team ID",
           "required": true
         }
-      }
+      },
+      "skill_set": [
+        "hub://slack@1.0.0"
+      ]
     },
     "sqlite": {
       "latest": "1.0.0",
@@ -507,6 +632,38 @@
           "required": true
         }
       }
+    },
+    "wrangler": {
+      "latest": "1.0.0",
+      "description": "Wrangler \u2014 Cloudflare Workers CLI: deploy, dev, KV, R2, D1, Pages, Tunnels",
+      "tags": [
+        "cloudflare",
+        "serverless",
+        "deploy"
+      ],
+      "verified": true,
+      "source": {
+        "type": "cli",
+        "install": "npm install -g wrangler"
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "79501f7052bdb11c127531f120dda4b835b7077f958aed70243bd3c20bd952ae"
+        }
+      },
+      "credentials": {
+        "CLOUDFLARE_API_TOKEN": {
+          "label": "Cloudflare API token (create at dash.cloudflare.com/profile/api-tokens)",
+          "required": true
+        },
+        "CLOUDFLARE_ACCOUNT_ID": {
+          "label": "Cloudflare account ID",
+          "required": false
+        }
+      },
+      "skill_set": [
+        "hub://cloudflare-master@1.0.0"
+      ]
     }
   }
 }

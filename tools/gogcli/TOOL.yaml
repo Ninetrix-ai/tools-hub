@@ -1,0 +1,26 @@
+name: gogcli
+version: 1.0.0
+description: "gogcli — Google Workspace CLI: Gmail, Calendar, Drive, Sheets, Docs, Contacts, Tasks, and more"
+author: ninetrix
+tags:
+- google
+- workspace
+- email
+- productivity
+verified: true
+
+skill_set:
+  - hub://google-workspace-master@1.0.0
+
+source:
+  type: cli
+  install: |
+    curl -sSL https://github.com/steipete/gogcli/releases/latest/download/gog_linux_amd64.tar.gz | tar xz -C /usr/local/bin gog
+
+credentials:
+  GOG_OAUTH_CLIENT_JSON:
+    label: Google Cloud OAuth client JSON (Desktop app credentials)
+    required: true
+  GOG_REFRESH_TOKEN:
+    label: Google OAuth refresh token for headless auth
+    required: false

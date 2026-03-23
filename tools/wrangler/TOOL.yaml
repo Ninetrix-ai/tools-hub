@@ -1,0 +1,24 @@
+name: wrangler
+version: 1.0.0
+description: "Wrangler — Cloudflare Workers CLI: deploy, dev, KV, R2, D1, Pages, Tunnels"
+author: ninetrix
+tags:
+- cloudflare
+- serverless
+- deploy
+verified: true
+
+skill_set:
+  - hub://cloudflare-master@1.0.0
+
+source:
+  type: cli
+  install: npm install -g wrangler
+
+credentials:
+  CLOUDFLARE_API_TOKEN:
+    label: Cloudflare API token (create at dash.cloudflare.com/profile/api-tokens)
+    required: true
+  CLOUDFLARE_ACCOUNT_ID:
+    label: Cloudflare account ID
+    required: false

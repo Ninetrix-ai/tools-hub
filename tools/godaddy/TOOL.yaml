@@ -1,0 +1,30 @@
+name: godaddy
+version: 1.0.0
+description: "GoDaddy — domains, DNS, SSL certificates, and account management via REST API"
+author: ninetrix
+tags:
+- domains
+- dns
+- hosting
+verified: true
+
+skill_set:
+  - hub://godaddy-guide@1.0.0
+
+source:
+  type: openapi
+  spec_url: https://raw.githubusercontent.com/konfig-sdks/openapi-examples/HEAD/godaddy/domains/openapi.yaml
+  base_url: https://api.godaddy.com
+
+credentials:
+  GODADDY_API_KEY:
+    label: GoDaddy API key (from developer.godaddy.com)
+    required: true
+  GODADDY_API_SECRET:
+    label: GoDaddy API secret
+    required: true
+
+auth:
+  type: header
+  name: Authorization
+  value: "sso-key ${GODADDY_API_KEY}:${GODADDY_API_SECRET}"

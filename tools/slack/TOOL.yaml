@@ -5,6 +5,9 @@ author: ninetrix
 tags:
 - communication
 verified: true
+
+skill_set:
+  - hub://slack@1.0.0
 source:
   type: mcp
   runner: npx

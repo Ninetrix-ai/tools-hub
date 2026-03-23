@@ -1,0 +1,20 @@
+name: cloudflare
+version: 1.0.0
+description: "Cloudflare API — 2,500+ endpoints via MCP: DNS, Workers, R2, Zero Trust, and more"
+author: ninetrix
+tags:
+- cloudflare
+- dns
+- cdn
+- infrastructure
+verified: true
+
+skill_set:
+  - hub://cloudflare-master@1.0.0
+
+source:
+  type: mcp
+  runner: npx
+  package: mcp-remote
+  args:
+    - https://mcp.cloudflare.com/mcp
