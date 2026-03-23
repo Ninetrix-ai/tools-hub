@@ -17,6 +17,9 @@ source:
   install: "apt-get update && apt-get install -y curl && curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg -o /usr/share/keyrings/gh.gpg && echo 'deb [signed-by=/usr/share/keyrings/gh.gpg] https://cli.github.com/packages stable main' > /etc/apt/sources.list.d/gh.list && apt-get update && apt-get install -y gh"
 
 credentials:
-  GITHUB_TOKEN:
-    label: GitHub personal access token (used by gh for auth)
+  GH_TOKEN:
+    label: GitHub personal access token (used by gh CLI for auth)
     required: true
+
+credential_aliases:
+  GITHUB_TOKEN: GH_TOKEN

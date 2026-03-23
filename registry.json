@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": "2026-03-23T04:27:22Z",
+  "generated_at": "2026-03-23T04:37:43Z",
   "tools": {
     "agent-browser": {
       "latest": "1.0.0",
@@ -161,14 +161,17 @@
       },
       "versions": {
         "1.0.0": {
-          "sha256": "a2115fcc1f6201434adfd16e6f83105f9ae02647198f7d759d5e06370249c68c"
+          "sha256": "ea1f7cf63fc61a37799d117aa02e7529e8d35d1d0ec89fcb083e399026bf1149"
         }
       },
       "credentials": {
-        "GITHUB_TOKEN": {
-          "label": "GitHub personal access token (used by gh for auth)",
+        "GH_TOKEN": {
+          "label": "GitHub personal access token (used by gh CLI for auth)",
           "required": true
         }
+      },
+      "credential_aliases": {
+        "GITHUB_TOKEN": "GH_TOKEN"
       },
       "skill_set": [
         "hub://gh-master@1.0.0"
