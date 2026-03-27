@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": "2026-03-25T23:12:14Z",
+  "generated_at": "2026-03-27T16:02:41Z",
   "tools": {
     "agent-browser": {
       "latest": "1.0.0",
@@ -398,6 +398,40 @@
           "sha256": "f7cda2202363af85cf62524a187483e3e94e4d7030894889998ce8a7811e1b11"
         }
       }
+    },
+    "hub-runtime": {
+      "latest": "1.0.0",
+      "description": "Ninetrix Hub Runtime \u2014 search, install tools and skills dynamically at runtime",
+      "tags": [
+        "hub",
+        "runtime",
+        "self-extend",
+        "tools"
+      ],
+      "verified": true,
+      "source": {
+        "type": "local",
+        "files": [
+          "hub_runtime_tools.py"
+        ]
+      },
+      "versions": {
+        "1.0.0": {
+          "sha256": "51cdaa10fefa8b1af78ad1fe5214d04d3e478789651d465b7eac8a554ad0177d",
+          "file_hashes": {
+            "hub_runtime_tools.py": "b1b3dc498f7da8cdc536c604492f7dfb783a7fab2e4b2a9f45aac0d6a0b08c36"
+          }
+        }
+      },
+      "dependencies": {
+        "pip": [
+          "httpx>=0.27",
+          "pyyaml>=6.0"
+        ]
+      },
+      "skill_set": [
+        "hub://hub-explorer@1.0.0"
+      ]
     },
     "linear": {
       "latest": "1.0.0",

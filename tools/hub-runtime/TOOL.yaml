@@ -1,0 +1,23 @@
+name: hub-runtime
+version: 1.0.0
+description: "Ninetrix Hub Runtime — search, install tools and skills dynamically at runtime"
+author: ninetrix
+tags:
+- hub
+- runtime
+- self-extend
+- tools
+verified: true
+
+skill_set:
+  - hub://hub-explorer@1.0.0
+
+source:
+  type: local
+  files:
+    - hub_runtime_tools.py
+
+dependencies:
+  pip:
+    - httpx>=0.27
+    - pyyaml>=6.0
